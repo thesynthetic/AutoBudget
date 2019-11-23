@@ -19,7 +19,7 @@ dateEnd = sys.argv[4]
 ######################################
 
 df = pd.read_csv(filepath_or_buffer = bofaFilename)
-df = df[df.Status != 'Posted']
+df = df[df.Status != 'pending']
 df['Source'] = 'Bank of America'
 df['Category'] = ''
 df = df[['Date', 'Source', 'Original Description', 'Category',
